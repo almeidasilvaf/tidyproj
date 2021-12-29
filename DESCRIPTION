@@ -1,0 +1,35 @@
+Package: tidyproj
+Title: Create a standard project structure for reproducible research
+Version: 0.99.0
+Authors@R: 
+    c(
+    person(given = "Fabricio",
+           family = "Almeida-Silva",
+           role = c("aut", "cre"),
+           email = "fabricio_almeidasilva@hotmail.com",
+           comment = c(ORCID = "0000-0002-5314-2964"))
+    )
+Description: This package aims to standardize the process of creating
+    a directory structure for scientific projects. The directory structure
+    ensures all projects look the same, so researchers can easily load and 
+    save data in subdirectories.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/almeidasilvaf/tidyproj
+BugReports: https://github.com/almeidasilvaf/tidyproj/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports:
+    fs,
+    rmarkdown,
+    here,
+    renv
+Depends: 
+    R (>= 4.1)
+Suggests: 
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
+VignetteBuilder: knitr

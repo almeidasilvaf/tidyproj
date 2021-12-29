@@ -1,0 +1,4 @@
+name: Template for code
+description: >
+   This is the template file for the .Rmd files in the code directory
+create_dir: FALSE
