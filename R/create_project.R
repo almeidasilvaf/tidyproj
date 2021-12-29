@@ -14,9 +14,7 @@
 #' @importFrom renv init
 #' @export
 create_project_tree <- function(create_renv = TRUE) {
-    if(create_renv) {
-        renv::init()
-    }
+    
     fs::dir_create(here::here("code"))
     rmarkdown::draft(here::here("code", "01_first_analysis.Rmd"), 
                      template = "template-for-code", package = "tidyproj", 
@@ -38,4 +36,7 @@ create_project_tree <- function(create_renv = TRUE) {
     fs::dir_create(here::here("products", "plots"))
     fs::dir_create(here::here("products", "figs"))
     fs::dir_create(here::here("products", "tables"))
+    if(create_renv) {
+        renv::init()
+    }
 }
