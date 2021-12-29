@@ -3,13 +3,11 @@ Title: Create a standard project structure for reproducible research
 Version: 0.99.0
 Date: 2021-12-29
 Authors@R: 
-    c(
     person(given = "Fabrício",
-           family = "Almeida-Silva",
-           role = c("aut", "cre"),
-           email = "fabricio_almeidasilva@hotmail.com",
-           comment = c(ORCID = "0000-0002-5314-2964"))
-    )
+        family = "Almeida-Silva",
+        role = c("aut", "cre"),
+        email = "fabricio_almeidasilva@hotmail.com",
+        comment = c(ORCID = "0000-0002-5314-2964"))
 Description: tidyproj aims to standardize the process of creating
     a directory structure for scientific projects. The directory structure
     ensures all projects look the same, so researchers can easily load and 
@@ -18,17 +16,16 @@ License: GPL-3
 URL: https://github.com/almeidasilvaf/tidyproj
 BugReports: https://github.com/almeidasilvaf/tidyproj/issues
 Encoding: UTF-8
-LazyData: false
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Imports:
+Imports: 
     fs,
     rmarkdown,
     here,
     renv
 Depends: 
     R (>= 4.1)
-Suggests: 
+Suggests:
     testthat (>= 3.0.0),
     knitr,
     rmarkdown
