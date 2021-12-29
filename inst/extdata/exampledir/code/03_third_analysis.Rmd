@@ -1,0 +1,36 @@
+---
+title: "Document name"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE,
+                      warning=FALSE, 
+                      message=FALSE,
+                      tidy.opts=list(width.cutoff=60),
+                      tidy=TRUE)
+```
+
+```{r here}
+library(here)
+```
+
+## Overview
+
+Here, you must describe the goal of the analyses documented in this documented.
+
+## Analysis 1
+
+```{r}
+
+```
+
+## Session info
+
+This document was created under the following conditions:
+
+```{r sessioninfo}
+sessionInfo()
+```
