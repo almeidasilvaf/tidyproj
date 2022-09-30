@@ -14,7 +14,7 @@
 #' @importFrom here here
 #' @export
 #' @examples 
-#' rootdir <- file.path(tempdir(), paste0(sample(1:100, 1), "_tidyproj_ex")
+#' rootdir <- file.path(tempdir(), paste0(sample(1:100, 1), "_tidyproj_ex"))
 #' c <- create_project_tree(rootdir)
 create_project_tree <- function(rootdir = here::here()) {
 
