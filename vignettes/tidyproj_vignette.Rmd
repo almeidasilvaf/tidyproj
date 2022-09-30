@@ -1,0 +1,206 @@
+---
+title: "Seamless setup of a reproducible research project"
+author: 
+  - name: Fabricio Almeida-Silva
+    affiliation: 
+    - VIB-UGent Center for Plant Systems Biology, Ghent University, Ghent, Belgium
+output: 
+  BiocStyle::html_document:
+    toc: true
+    toc_float: true
+    number_sections: yes
+vignette: >
+  %\VignetteIndexEntry{Seamless setup of a reproducible research project}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+    collapse = TRUE,
+    comment = "#>",
+    crop = NULL ## Related to https://stat.ethz.ch/pipermail/bioc-devel/2020-April/016656.html
+)
+```
+
+# Introduction and motivation
+
+When scientists start working with large-scale data analysis, they typically
+learn their field-specific skills (e.g., analyzing sequencing data for
+bioinformaticians, modelling for mathematicians, etc.), but project management
+skills are largely overlooked. Over the years, this has culminated in what we 
+now call "the reproducibility crisis": researchers do not document 
+their analyses and/or do not have a consistent way of organizing data,
+code, and products of each project. 
+The goal of `r BiocStyle::Githubpkg("almeidasilvaf/tidyproj")` is to provide
+researchers with a simple framework to set up a standard directory structure
+that can (and should) be used across projects. This way, researchers can
+easily switch across projects without having to ask themselves 
+*"where did I save that table for my paper?"* or 
+*"where is the code I used to create this figure?"*. 
+When you establish a reproducible and consistent project structure with
+`r BiocStyle::Githubpkg("almeidasilvaf/tidyproj")`, you help not only people
+who want to reproduce your work, but also your future self, as you can go
+back to a project after several months and easily find what you're looking for.
+
+
+# Installation
+
+You can install `r BiocStyle::Githubpkg("almeidasilvaf/tidyproj")` from
+GitHub with the following code:
+
+```{r installation, eval = FALSE}
+if(!requireNamespace('remotes', quietly = TRUE))
+  install.packages('remotes')
+
+remotes::install_github("almeidasilvaf/tidyproj")
+```
+
+```{r load_package, message = FALSE, warning = FALSE}
+# Load package after installation
+library(tidyproj)
+```
+
+# Creating a standardized directory structure
+
+To create `r BiocStyle::Githubpkg("almeidasilvaf/tidyproj")`'s standard project
+structure, you only need one function: `create_project_tree()`. 
+By default, this function assumes you have already created 
+an `R Project` (.Rproj file), so it will create the project structure 
+in the path returned by `here::here()`. However, you can specify another root 
+directory.
+
+Here, we will create the project structure using a temporary directory as the
+root directory.
+
+```{r create_project_tree}
+# Create project structure in a temporary directory
+rootdir <- file.path(tempdir(), "example_project")
+rootdir
+
+create_project_tree(rootdir)
+```
+
+The function `create_project_tree()` creates 3 directories (**data**, **code**,
+and **products**), as well as a `README.md` file. In the sections below,
+you will find what each of them mean.
+
+## The **data/** directory
+
+The **data/** directory is where you must store all input data you
+use in the project. For example, if you are a bioinformatician working on
+RNA-seq data that you obtained from a public database, you must include the
+gene expression matrices (e.g., as .tsv files) in this directory. Note that
+there is a `DATA_DESCRIPTION.Rmd` file in the **data/** directory, which must
+contain all code you used to obtain each file in this directory.
+
+## The **code/** directory
+
+The **code/** directory contains `.Rmd` files that will describe all your
+analyses (code and text). Each file is already prepopulated with fields
+that should be present in your documents. Let's take a look at one of them.
+
+```{r code_dir}
+# Path to .Rmd file 01_first_analysis.Rmd
+rmd1 <- file.path(rootdir, "code", "01_first_analysis.Rmd")
+
+# Print content of the file
+cat(readLines(rmd1), sep = "\n")
+```
+
+The mandatory sections for each `.Rmd` file include:
+
+1. **Overview:** In this section, you will briefly describe what you are doing
+in this document, listing objectives you want to achieve or scientific
+questions you are trying to address.
+
+2. **Analysis [n]:** These are the sections where you will write the code
+for your data analyses. Always try to use a section for each objective you
+described in **Overview**. Thus, if you want to answer 4 questions in a
+specific `.Rmd` file, list these 4 questions in **Overview** and write a
+separate **Analysis** section for each question. Besides, make sure you include
+not only code chunks, but also text describing your analysis and summarizing
+what you observed. **I am 100% sure that this will help you write the paper**,
+because you will already have a summary of your findings. In a sense,
+you will write parts of your paper while you do the analyses, and that is
+super helpful.
+
+3. **Session information:** This section contains a code chunk that will 
+display information about everything you used in your R session, including
+OS, R version, packages you loaded, packages that were used indirectly, etc.
+
+
+Note that code chunks are not evaluated by default (except for session 
+information code). This is because most real-world scientific projects 
+contain heavy analyses with code chunks that take a long time to run.
+While it is very important to have evaluated code in these documentations, 
+that is not always possible. At the end of the day, it's way better to have 
+documented code that is not evaluated than having no documentation at all.
+However, if your `.Rmd` file describes analyses that do not take a long
+time to run, you can (and should) set `eval = TRUE` in the code chunk options.
+
+## The **products/** directory
+
+This directory must contain all products you obtain during your analyses,
+which are classified in different categories:
+
+1. **plots:** where all plots you create are stored. Plots can be stored
+as image files (e.g., `.png`, `.pdf`, `.svg`, etc) or as `.rda` files 
+if you are used to working with `ggplot` objects. I **strongly recommend** 
+saving plots as .rda files, so you can manipulate them later without having to 
+rerun the code to create them. This is particularly useful if you want to 
+modify aesthetics of your `ggplot` objects (e.g., color, size, etc) or 
+combine multiple ggplots into multiple panels to make a more complex figure.
+
+2. **figs:** where the final figures (the elegant and complex ones that 
+will go to your paper) are stored. For example, here you can store a PDF figure
+that you created by combining several `ggplot` objects contained in the
+**plots** subdirectory. 
+
+3. **tables:** where tables with summary statistics are stored. Avoid saving
+tables as `.xlsx` (Excel) files. If you want to create an `.xlsx` file with
+multiple tabs that represents your whole set of Supplementary Tables, you
+can do it, but keep the original tables you used for each tab as 
+`.csv`/`.tsv`/`.txt` files.
+
+4. **result_files:** where files with important results are stored. These
+can be `.rda` files with R objects (e.g., a `DESeq` object from your
+differential gene expression analysis, an `lm` object from a model fit, etc.)
+and/or files that cannot be stored in tabular format in the **tables**
+subdirectory (e.g., .nwk files representing phylogenies, software output
+with a very specific format, etc).
+
+## The **README.md** file
+
+This file is where you will briefly summarize your project. It is prepopulated
+with mandatory content (project title and abstract), but you can add whatever
+kind of information you think is useful (e.g., publication DOI when the
+manuscript is published, external links, etc). This is what the default
+file looks like:
+
+```{r readme_md}
+# Path to README.md file
+readme <- file.path(rootdir, "README.md")
+
+# Print content
+cat(readLines(readme), sep = "\n")
+```
+
+# Creating new `.Rmd` files
+
+By default, `r BiocStyle::Githubpkg("almeidasilvaf/tidyproj")` adds
+four `.Rmd` files to the **code/** directory. If you need more files,
+you can create them with the function `create_rmd()`.
+
+```{r create_rmd}
+# Create another .Rmd file inside code/
+create_rmd(rootdir, filename = "05_descriptive_analysis_name.Rmd")
+```
+
+# Session information {.unnumbered}
+
+This document was created under the following conditions:
+
+```{r sessionInfo}
+sessioninfo::session_info()
+```

@@ -20,6 +20,10 @@ create_project_tree <- function(rootdir = here::here()) {
 
     fs::dir_create(rootdir)    
     
+    # README.md
+    content <- c("# Project title", "", "", "## Abstract", "", "")
+    writeLines(content, con = file.path(rootdir, "README.md"))
+    
     # Directories
     dirs <- c(
         # code/ directory

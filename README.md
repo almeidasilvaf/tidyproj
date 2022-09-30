@@ -24,6 +24,7 @@ inst/extdata. The directory structure looks like this:
 exampledir <- system.file("extdata", "exampledir", package = "tidyproj")
 fs::dir_tree(exampledir)
 #> /home/faalm/R/x86_64-pc-linux-gnu-library/4.2/tidyproj/extdata/exampledir
+#> ├── README.md
 #> ├── code
 #> │   ├── 01_first_analysis.Rmd
 #> │   ├── 02_second_analysis.Rmd
@@ -40,10 +41,11 @@ fs::dir_tree(exampledir)
 
 ## Installation
 
-You can install the development version from
-[GitHub](https://github.com/) with:
+Get the latest stable R release from CRAN. Then, install **tidyproj**
+from GitHub using the following code:
 
 ``` r
-# install.packages("remotes")
+if(!requireNamespace('remotes', quietly = TRUE))
+  install.packages('remotes')
 remotes::install_github("almeidasilvaf/tidyproj")
 ```
