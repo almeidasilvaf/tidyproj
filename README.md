@@ -22,18 +22,18 @@ inst/extdata. The directory structure looks like this:
 exampledir <- system.file("extdata", "exampledir", package = "tidyproj")
 fs::dir_tree(exampledir)
 #> /home/faalm/R/x86_64-pc-linux-gnu-library/4.2/tidyproj/extdata/exampledir
-#> ├── README.md
 #> ├── code
 #> │   ├── 01_first_analysis.Rmd
 #> │   ├── 02_second_analysis.Rmd
 #> │   ├── 03_third_analysis.Rmd
 #> │   └── 04_fourth_analysis.Rmd
 #> ├── data
-#> │   └── DATA_DESCRIPTION.md
-#> ├── renv
-#> │   ├── activate.R
-#> │   └── settings.dcf
-#> └── renv.lock
+#> │   └── DATA_DESCRIPTION.Rmd
+#> └── products
+#>     ├── figs
+#>     ├── plots
+#>     ├── result_files
+#>     └── tables
 ```
 
 ## Installation
