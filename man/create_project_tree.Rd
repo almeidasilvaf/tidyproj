@@ -4,15 +4,22 @@
 \alias{create_project_tree}
 \title{Create project tree}
 \usage{
-create_project_tree(create_renv = TRUE)
+create_project_tree(rootdir = here::here(), create_renv = FALSE)
 }
 \arguments{
+\item{rootdir}{Path to root directory where the structure will be created.
+Default: \code{here::here()}.}
+
 \item{create_renv}{Logical indicating whether to lockfile to handle
-package dependencies with the package {renv}. Default: TRUE.}
+package dependencies with the package {renv}. Default: FALSE.}
 }
 \value{
 A standard directory structure
 }
 \description{
 This function creates a standard directory structure for scientific projects.
+}
+\examples{
+rootdir <- file.path(tempdir(), "tidyproj_example")
+c <- create_project_tree(rootdir)
 }

@@ -6,31 +6,50 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=TRUE,
-                      warning=FALSE, 
-                      message=FALSE,
-                      tidy.opts=list(width.cutoff=60),
-                      tidy=TRUE)
+knitr::opts_chunk$set(
+    echo = TRUE,
+    warning = FALSE, 
+    message = FALSE,
+    eval = FALSE,
+    tidy.opts = list(width.cutoff = 60),
+    tidy = TRUE
+)
 ```
 
 ```{r here}
+set.seed(123) # for reproducibility
+
+# Load required packages
 library(here)
 ```
 
-## Overview
+# Overview
 
-Here, you must describe the goal of the analyses documented in this documented.
+Here, we will describe the code to:
 
-## Analysis 1
+1. Goal 1
+2. Goal 2
+3. Goal 3
+
+
+# Analysis 1
 
 ```{r}
-
+data(airquality)
+head(airquality)
 ```
 
-## Session info
+# Analysis 2
+
+```{r}
+data(airquality)
+head(airquality)
+```
+
+# Session information {.unnumbered}
 
 This document was created under the following conditions:
 
-```{r sessioninfo}
-sessionInfo()
+```{r sessioninfo, eval = TRUE}
+sessioninfo::session_info()
 ```

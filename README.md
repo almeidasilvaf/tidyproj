@@ -21,7 +21,7 @@ inst/extdata. The directory structure looks like this:
 ``` r
 exampledir <- system.file("extdata", "exampledir", package = "tidyproj")
 fs::dir_tree(exampledir)
-#> /private/var/folders/ls/n6w3s9bx79lcr2pcd1hm77780000gn/T/RtmpMrkuM1/temp_libpath4762502358/tidyproj/extdata/exampledir
+#> /home/faalm/R/x86_64-pc-linux-gnu-library/4.2/tidyproj/extdata/exampledir
 #> ├── README.md
 #> ├── code
 #> │   ├── 01_first_analysis.Rmd
@@ -30,16 +30,10 @@ fs::dir_tree(exampledir)
 #> │   └── 04_fourth_analysis.Rmd
 #> ├── data
 #> │   └── DATA_DESCRIPTION.md
-#> ├── products
-#> │   ├── figs
-#> │   ├── plots
-#> │   ├── result_files
-#> │   └── tables
 #> ├── renv
 #> │   ├── activate.R
 #> │   └── settings.dcf
-#> ├── renv.lock
-#> └── test.Rproj
+#> └── renv.lock
 ```
 
 ## Installation
@@ -48,15 +42,6 @@ You can install the development version from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("almeidasilvaf/tidyproj")
-```
-
-## Usage
-
-Users can create the project structure with a single function:
-
-``` r
-library(tidyproj)
-create_project_tree()
+# install.packages("remotes")
+remotes::install_github("almeidasilvaf/tidyproj")
 ```
