@@ -23,15 +23,14 @@ RoxygenNote: 7.2.0
 Imports: 
     fs,
     rmarkdown,
-    here,
-    BiocStyle,
-    sessioninfo
+    here
 Depends: 
     R (>= 4.1)
 Suggests:
     testthat (>= 3.0.0),
     knitr,
-    rmarkdown,
-    covr
+    covr,
+    BiocStyle,
+    sessioninfo
 Config/testthat/edition: 3
 VignetteBuilder: knitr

@@ -17,6 +17,6 @@ A character vector with aths to the directory structure.
 This function creates a standard directory structure for scientific projects.
 }
 \examples{
-rootdir <- file.path(tempdir(), "tidyproj_example")
+rootdir <- file.path(tempdir(), paste0(sample(1:100, 1), "_tidyproj_ex")
 c <- create_project_tree(rootdir)
 }

@@ -14,7 +14,7 @@
 #' @importFrom here here
 #' @export
 #' @examples 
-#' rootdir <- file.path(tempdir(), "tidyproj_example")
+#' rootdir <- file.path(tempdir(), paste0(sample(1:100, 1), "_tidyproj_ex")
 #' c <- create_project_tree(rootdir)
 create_project_tree <- function(rootdir = here::here()) {
 
@@ -82,7 +82,8 @@ create_project_tree <- function(rootdir = here::here()) {
 #' c <- create_project_tree(rootdir)
 #' 
 #' # Create file
-#' file <- create_rmd(rootdir, filename = "05_new_analysis.Rmd")
+#' fname <- paste0(sample(1:100, 1), "_new_analysis.Rmd")
+#' file <- create_rmd(rootdir, filename = fname)
 create_rmd <- function(rootdir = here::here(), 
                        filename = "00_new_code_file.Rmd") {
     
