@@ -4,17 +4,14 @@
 \alias{create_project_tree}
 \title{Create project tree}
 \usage{
-create_project_tree(rootdir = here::here(), create_renv = FALSE)
+create_project_tree(rootdir = here::here())
 }
 \arguments{
 \item{rootdir}{Path to root directory where the structure will be created.
 Default: \code{here::here()}.}
-
-\item{create_renv}{Logical indicating whether to lockfile to handle
-package dependencies with the package {renv}. Default: FALSE.}
 }
 \value{
-A standard directory structure
+A character vector with aths to the directory structure.
 }
 \description{
 This function creates a standard directory structure for scientific projects.

@@ -5,10 +5,9 @@
 #' 
 #' @param rootdir Path to root directory where the structure will be created.
 #' Default: \code{here::here()}.
-#' @param create_renv Logical indicating whether to lockfile to handle 
-#' package dependencies with the package {renv}. Default: FALSE.
 #' 
-#' @return A standard directory structure
+#' @return A character vector with aths to the directory structure.
+#' 
 #' @rdname create_project_tree
 #' @importFrom fs dir_create dir_tree
 #' @importFrom rmarkdown draft
@@ -17,7 +16,7 @@
 #' @examples 
 #' rootdir <- file.path(tempdir(), "tidyproj_example")
 #' c <- create_project_tree(rootdir)
-create_project_tree <- function(rootdir = here::here(), create_renv = FALSE) {
+create_project_tree <- function(rootdir = here::here()) {
 
     fs::dir_create(rootdir)    
     
@@ -63,3 +62,36 @@ create_project_tree <- function(rootdir = here::here(), create_renv = FALSE) {
     
     return(fs::dir_tree(rootdir))
 }
+
+#' Create an .Rmd file for code
+#'
+#' @param rootdir Path to root of the directory created 
+#' with \code{create_project_tree()}. Default: \code{here::here().}
+#' Default: \code{here::here()}.
+#' @param filename Character specifying the name of the .Rmd file to be 
+#' created. Default: 0_new_code_file.Rmd.
+#' 
+#' 
+#' @return Path to newly created .Rmd file.
+#' 
+#' @export
+#' @rdname create_rmd
+#' @importFrom rmarkdown draft
+#' @examples 
+#' rootdir <- file.path(tempdir(), "tidyproj_example")
+#' c <- create_project_tree(rootdir)
+#' 
+#' # Create file
+#' file <- create_rmd(rootdir, filename = "05_new_analysis.Rmd")
+create_rmd <- function(rootdir = here::here(), 
+                       filename = "00_new_code_file.Rmd") {
+    
+    file_path <- file.path(rootdir, "code", filename)
+    c <- rmarkdown::draft(
+        file_path,
+        template = "template-for-code", package = "tidyproj", 
+        edit = FALSE
+    )
+    return(file_path)
+}
+
