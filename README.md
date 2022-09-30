@@ -1,12 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tidyproj
+# tidyproj <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R-CMD-check](https://github.com/almeidasilvaf/tidyproj/workflows/R-CMD-check/badge.svg)](https://github.com/almeidasilvaf/tidyproj/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/almeidasilvaf/tidyproj/branch/master/graph/badge.svg)](https://app.codecov.io/gh/almeidasilvaf/tidyproj?branch=master)
