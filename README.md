@@ -8,6 +8,8 @@
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/almeidasilvaf/tidyproj/workflows/R-CMD-check/badge.svg)](https://github.com/almeidasilvaf/tidyproj/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/almeidasilvaf/tidyproj/branch/master/graph/badge.svg)](https://app.codecov.io/gh/almeidasilvaf/tidyproj?branch=master)
 <!-- badges: end -->
 
 The goal of `tidyproj` is to create a standard directory structure for
