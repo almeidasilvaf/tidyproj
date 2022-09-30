@@ -22,6 +22,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -34,25 +36,22 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">tidyproj</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.99.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.99.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
+  <a href="reference/index.html">Reference</a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="news/index.html">Changelog</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/almeidasilvaf/tidyproj/">
+  <a href="https://github.com/almeidasilvaf/tidyproj/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -69,71 +68,91 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="tidyproj" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#tidyproj" class="anchor"></a>tidyproj</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="tidyproj">tidyproj<a class="anchor" aria-label="anchor" href="#tidyproj"></a>
+</h1></div>
 <!-- badges: start -->
-
 <p>The goal of <code>tidyproj</code> is to create a standard directory structure for scientific projects, including a code, data, and products directory. This way, all projects will look the same, making it easier to load and save data in different projects.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<p>You can see an example directory created with <code>tidyproj</code> in inst/extdata. The directory structure looks like this:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"almeidasilvaf/tidyproj"</span><span class="op">)</span></code></pre></div>
-</div>
-<div id="usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h2>
-<p>Users can create the project structure with a single function:</p>
+<code class="sourceCode R"><span><span class="va">exampledir</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"exampledir"</span>, package <span class="op">=</span> <span class="st">"tidyproj"</span><span class="op">)</span></span>
+<span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_tree.html" class="external-link">dir_tree</a></span><span class="op">(</span><span class="va">exampledir</span><span class="op">)</span></span>
+<span><span class="co">#&gt; /home/faalm/R/x86_64-pc-linux-gnu-library/4.2/tidyproj/extdata/exampledir</span></span>
+<span><span class="co">#&gt; ├── code</span></span>
+<span><span class="co">#&gt; │   ├── 01_first_analysis.Rmd</span></span>
+<span><span class="co">#&gt; │   ├── 02_second_analysis.Rmd</span></span>
+<span><span class="co">#&gt; │   ├── 03_third_analysis.Rmd</span></span>
+<span><span class="co">#&gt; │   └── 04_fourth_analysis.Rmd</span></span>
+<span><span class="co">#&gt; ├── data</span></span>
+<span><span class="co">#&gt; │   └── DATA_DESCRIPTION.Rmd</span></span>
+<span><span class="co">#&gt; └── products</span></span>
+<span><span class="co">#&gt;     ├── figs</span></span>
+<span><span class="co">#&gt;     ├── plots</span></span>
+<span><span class="co">#&gt;     ├── result_files</span></span>
+<span><span class="co">#&gt;     └── tables</span></span></code></pre></div>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>You can install the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/almeidasilvaf/tidyproj">tidyproj</a></span><span class="op">)</span>
-<span class="fu"><a href="reference/create_project_tree.html">create_project_tree</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"almeidasilvaf/tidyproj"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/almeidasilvaf/tidyproj/">https://​github.com/​almeidasilvaf/​tidyproj/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/almeidasilvaf/tidyproj/issues">https://​github.com/​almeidasilvaf/​tidyproj/​issues</a>
-</li>
-</ul>
-</div>
-<div class="license">
-<h2>License</h2>
-<ul class="list-unstyled">
-<li><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>Fabrício Almeida-Silva <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-5314-2964" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="https://github.com/almeidasilvaf/tidyproj/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/almeidasilvaf/tidyproj/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="license">
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
-<li><a href="https://github.com/almeidasilvaf/tidyproj/actions"><img src="https://github.com/almeidasilvaf/tidyproj/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://www.r-project.org/Licenses/GPL-3" class="external-link">GPL-3</a></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing tidyproj</a></li>
+</ul>
 </div>
+
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
+<ul class="list-unstyled">
+<li>Fabrício Almeida-Silva <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-5314-2964" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+</ul>
+</div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+<li><a href="https://github.com/almeidasilvaf/tidyproj/actions" class="external-link"><img src="https://github.com/almeidasilvaf/tidyproj/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://app.codecov.io/gh/almeidasilvaf/tidyproj?branch=master" class="external-link"><img src="https://codecov.io/gh/almeidasilvaf/tidyproj/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+</ul>
+</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Fabrício Almeida-Silva.</p>
+  <p></p>
+<p>Developed by Fabrício Almeida-Silva.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>
@@ -141,6 +160,8 @@
 
   
 
+
+  
 
   </body>
 </html>
