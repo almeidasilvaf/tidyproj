@@ -53,6 +53,12 @@
 <li class="nav-item">
   <a class="nav-link" href="reference/index.html">Reference</a>
 </li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="articles/tidyproj_vignette.html">Seamless setup of a reproducible research project</a>
+  </div>
+</li>
 <li class="nav-item">
   <a class="nav-link" href="news/index.html">Changelog</a>
 </li>
@@ -87,6 +93,7 @@
 <code class="sourceCode R"><span><span class="va">exampledir</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"exampledir"</span>, package <span class="op">=</span> <span class="st">"tidyproj"</span><span class="op">)</span></span>
 <span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_tree.html" class="external-link">dir_tree</a></span><span class="op">(</span><span class="va">exampledir</span><span class="op">)</span></span>
 <span><span class="co">#&gt; /home/faalm/R/x86_64-pc-linux-gnu-library/4.2/tidyproj/extdata/exampledir</span></span>
+<span><span class="co">#&gt; ├── README.md</span></span>
 <span><span class="co">#&gt; ├── code</span></span>
 <span><span class="co">#&gt; │   ├── 01_first_analysis.Rmd</span></span>
 <span><span class="co">#&gt; │   ├── 02_second_analysis.Rmd</span></span>
@@ -102,9 +109,10 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>Get the latest stable R release from CRAN. Then, install <strong>tidyproj</strong> from GitHub using the following code:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
+<code class="sourceCode R"><span><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">'remotes'</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'remotes'</span><span class="op">)</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"almeidasilvaf/tidyproj"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>

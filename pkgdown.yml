@@ -1,6 +1,7 @@
 pandoc: 2.14.2
 pkgdown: 2.0.6
 pkgdown_sha: ~
-articles: {}
-last_built: 2022-09-30T12:15Z
+articles:
+  tidyproj_vignette: tidyproj_vignette.html
+last_built: 2022-09-30T19:18Z
 
