@@ -23,7 +23,7 @@ inst/extdata. The directory structure looks like this:
 ``` r
 exampledir <- system.file("extdata", "exampledir", package = "tidyproj")
 fs::dir_tree(exampledir)
-#> /home/faalm/R/x86_64-pc-linux-gnu-library/4.2/tidyproj/extdata/exampledir
+#> /tmp/Rtmp6OxAsJ/temp_libpath9cfde46e58d41/tidyproj/extdata/exampledir
 #> ├── README.md
 #> ├── code
 #> │   ├── 01_first_analysis.Rmd
