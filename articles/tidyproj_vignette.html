@@ -143,10 +143,10 @@ directory as the root directory.</p>
 <code class="sourceCode R"><span><span class="co"># Create project structure in a temporary directory</span></span>
 <span><span class="va">rootdir</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">"example_project"</span><span class="op">)</span></span>
 <span><span class="va">rootdir</span></span>
-<span><span class="co">#&gt; [1] "/tmp/RtmpTwlLrf/example_project"</span></span>
+<span><span class="co">#&gt; [1] "/tmp/Rtmp9rftd9/example_project"</span></span>
 <span></span>
 <span><span class="fu"><a href="../reference/create_project_tree.html">create_project_tree</a></span><span class="op">(</span><span class="va">rootdir</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="color: #0000BB; font-weight: bold;">/tmp/RtmpTwlLrf/example_project</span></span></span>
+<span><span class="co">#&gt; <span style="color: #0000BB; font-weight: bold;">/tmp/Rtmp9rftd9/example_project</span></span></span>
 <span><span class="co">#&gt; ├── README.md</span></span>
 <span><span class="co">#&gt; ├── <span style="color: #0000BB; font-weight: bold;">code</span></span></span>
 <span><span class="co">#&gt; │   ├── <span style="color: #00BB00;">01_first_analysis.Rmd</span></span></span>
@@ -340,7 +340,7 @@ you need more files, you can create them with the function
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Create another .Rmd file inside code/</span></span>
 <span><span class="fu"><a href="../reference/create_rmd.html">create_rmd</a></span><span class="op">(</span><span class="va">rootdir</span>, filename <span class="op">=</span> <span class="st">"05_descriptive_analysis_name.Rmd"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "/tmp/RtmpTwlLrf/example_project/code/05_descriptive_analysis_name.Rmd"</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] "/tmp/Rtmp9rftd9/example_project/code/05_descriptive_analysis_name.Rmd"</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 class="unnumbered" id="session-information">Session information<a class="anchor" aria-label="anchor" href="#session-information"></a>
