@@ -78,8 +78,8 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">rootdir</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">setup_quarto_book</span><span class="op">(</span><span class="va">rootdir</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0000BB; font-weight: bold;">/tmp/RtmpI5OwCq</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ├── <span style="color: #0000BB; font-weight: bold;">57_tidyproj_ex</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0000BB; font-weight: bold;">/tmp/Rtmp3Bjp7O</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ├── <span style="color: #0000BB; font-weight: bold;">42_tidyproj_ex</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   ├── README.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   ├── <span style="color: #0000BB; font-weight: bold;">code</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   │   ├── <span style="color: #00BB00;">01_first_analysis.Rmd</span></span>
@@ -93,82 +93,10 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> │       └── <span style="color: #0000BB; font-weight: bold;">tables</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ├── _quarto.yml</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ├── bibliography.bib</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ├── <span style="color: #0000BB; font-weight: bold;">bslib-e4998ee9b933644e1a009e0519e87f9d</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ├── <span style="color: #0000BB; font-weight: bold;">bslib-d00de74d411b84a4f8e943d7f8fc266e</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   ├── bootstrap.bundle.min.js</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   ├── bootstrap.bundle.min.js.map</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │   ├── bootstrap.min.css</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │   ├── font.css</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │   └── <span style="color: #0000BB; font-weight: bold;">fonts</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCIPrc.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrc.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 1adeadb2fe618c5ed46221f15e12b9c8.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 4iCs6KVjbNBYlgo6ew.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 4iCs6KVjbNBYlgoKfw7w.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 4iCv6KVjbNBYlgoCxCvTtA.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 4iCv6KVjbNBYlgoCxCvjsGyL.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDQ.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 6xK1dSBYKcSV-LCoeQqfX1RYOo3qPa7j.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 6xK3dSBYKcSV-LCoeQqfX1RYOo3aPA.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7j.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 6xKydSBYKcSV-LCoeQqfX1RYOo3i54rAkw.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vAkw.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdo.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zAkw.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── 6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdo.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── CSR54z1Qlv-GDxkbKVQ_dFsvWNRevw.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── CSR54z1Qlv-GDxkbKVQ_dFsvaNA.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── CSR64z1Qlv-GDxkbKVQ_TOQ.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── CSR64z1Qlv-GDxkbKVQ_fOAKSw.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DBKXhM0.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQhM0.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── HI_jiYsKILxRpg3hIP6sJ7fM7PqlOPHYvDP_W9O7GQTTbI1rSg.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── HI_jiYsKILxRpg3hIP6sJ7fM7PqlOPHYvDP_W9O7GQTTsoprSg.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew9.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew9.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w9.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── KFOlCnqEu92Fr1MmEU9fBBc-.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── KFOlCnqEu92Fr1MmEU9vAA.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── KFOlCnqEu92Fr1MmSU5fBBc-.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── KFOlCnqEu92Fr1MmSU5vAA.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── KFOlCnqEu92Fr1MmWUlfBBc-.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── KFOlCnqEu92Fr1MmWUlvAA.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── KFOmCnqEu92Fr1Me5g.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── KFOmCnqEu92Fr1Mu4mxM.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── QGYpz_kZZAGCONcK2A4bGOj8mNhL.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── S6u8w4BMUTPHjxsAXC-s.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── S6u8w4BMUTPHjxswWA.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── S6u9w4BMUTPHh6UVSwiPHw.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── S6u9w4BMUTPHh6UVeww.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── S6u9w4BMUTPHh7USSwiPHw.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── S6u9w4BMUTPHh7USeww.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── S6uyw4BMUTPHjx4wWA.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── S6uyw4BMUTPHvxo.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYMZs.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fMZs.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZs.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── XRXI3I6Li01BKofiOc5wtlZ2di8HDFwmRTA.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── XRXI3I6Li01BKofiOc5wtlZ2di8HDGUmRTA.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── XRXI3I6Li01BKofiOc5wtlZ2di8HDLshRTA.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── a98f7a7574819ba83bec6279a2cecd95.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjaVQ.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkWVAexg.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkaVQ.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWVAexg.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkaVQ.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk_RkaVQ.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjaVQ.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjWVAexg.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjaVQ.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVQ.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4k.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4k.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4k.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVQ.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4k.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVQ.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4k.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       ├── memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0C4k.woff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> │       └── q5uGsou0JOdh94bfvQlr.woff</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> │   └── bootstrap.min.css</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ├── <span style="color: #0000BB; font-weight: bold;">chapters</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   ├── appendices.qmd</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   ├── chapter_01.qmd</span>
@@ -178,22 +106,22 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   ├── fs</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   ├── here</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   └── utils</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ├── file188d21866b0f</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ├── <span style="color: #0000BB; font-weight: bold;">file188d469fd540</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ├── file18ac134d5e52.qmd</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ├── file18ac390d7516</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ├── <span style="color: #0000BB; font-weight: bold;">file18ac63e63de3</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   ├── HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQhM0.woff</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   └── font.css</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ├── <span style="color: #0000BB; font-weight: bold;">file188d59d9b58a</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ├── file18ac74f23a18</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ├── <span style="color: #0000BB; font-weight: bold;">file18acde92762</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   ├── 9Bt23C1KxNDXMspQ1lPyU89-1h6ONRlW45GE5g.woff</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> │   └── font.css</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ├── file188d6296cbb6.qmd</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ├── file188d67140f11</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ├── index.qmd</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> └── <span style="color: #0000BB; font-weight: bold;">tidyproj_example</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     ├── README.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     ├── <span style="color: #0000BB; font-weight: bold;">code</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     │   ├── <span style="color: #00BB00;">01_first_analysis.Rmd</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     │   ├── <span style="color: #00BB00;">02_second_analysis.Rmd</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     │   └── <span style="color: #00BB00;">30_new_analysis.Rmd</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     │   └── <span style="color: #00BB00;">85_new_analysis.Rmd</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     ├── <span style="color: #0000BB; font-weight: bold;">data</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     │   └── <span style="color: #00BB00;">DATA_DESCRIPTION.Rmd</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     └── <span style="color: #0000BB; font-weight: bold;">products</span></span>
