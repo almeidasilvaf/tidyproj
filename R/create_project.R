@@ -6,7 +6,7 @@
 #' @param rootdir Path to root directory where the structure will be created.
 #' Default: \code{here::here()}.
 #' 
-#' @return A character vector with aths to the directory structure.
+#' @return A character vector with paths to the directory structure.
 #' 
 #' @rdname create_project_tree
 #' @importFrom fs dir_create dir_tree
@@ -49,9 +49,7 @@ create_project_tree <- function(rootdir = here::here()) {
     
     docs <- c(
         file.path(rootdir, "code", "01_first_analysis.Rmd"),
-        file.path(rootdir, "code", "02_second_analysis.Rmd"),
-        file.path(rootdir, "code", "03_third_analysis.Rmd"),
-        file.path(rootdir, "code", "04_fourth_analysis.Rmd")
+        file.path(rootdir, "code", "02_second_analysis.Rmd")
     )
     
     # Create .Rmd files
@@ -99,4 +97,5 @@ create_rmd <- function(rootdir = here::here(),
     )
     return(file_path)
 }
+
 

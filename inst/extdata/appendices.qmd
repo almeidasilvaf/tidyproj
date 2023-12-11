@@ -1,0 +1,24 @@
+---
+execute: 
+  echo: true
+  eval: false
+  warning: false
+---
+
+# Appendices {.unnumbered}
+
+Here, you can find other pieces of code (Bash and R scripts) that were
+used in the main chapters. These pieces of code were stored in separate files
+to make the main text (i.e., book chapters) more readable.
+
+
+## Session info {.unnumbered}
+
+This document was created under the following conditions:
+
+```{r sessioninfo}
+#| eval: true
+#| echo: false
+sessioninfo::session_info()
+```
+

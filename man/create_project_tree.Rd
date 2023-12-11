@@ -11,7 +11,7 @@ create_project_tree(rootdir = here::here())
 Default: \code{here::here()}.}
 }
 \value{
-A character vector with aths to the directory structure.
+A character vector with paths to the directory structure.
 }
 \description{
 This function creates a standard directory structure for scientific projects.

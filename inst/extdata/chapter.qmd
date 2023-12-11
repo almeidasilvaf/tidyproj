@@ -1,0 +1,36 @@
+---
+execute: 
+  echo: true
+  eval: false
+  warning: false
+---
+
+# Chapter title
+
+
+```{r here}
+#| message: false
+#| eval: true
+
+library(here)
+
+set.seed(123) # for reproducibility
+```
+
+## Section 1
+
+
+## Section 2
+
+
+## Session info {.unnumbered}
+
+This document was created under the following conditions:
+
+```{r sessioninfo}
+#| eval: true
+#| echo: false
+sessioninfo::session_info()
+```
+
+## References {.unnumbered}

@@ -1,0 +1,30 @@
+
+# Preface {.unnumbered}
+
+This book contains all code and data used in the paper
+*<paper title>*, and it is intended to make all analyses fully reproducible.
+
+---
+
+**ABSTRACT**
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus diam ut 
+orci vulputate venenatis. Nam tellus libero, pulvinar ut faucibus id, gravida 
+vitae odio. Phasellus facilisis, libero nec lobortis porttitor, justo ante 
+suscipit nulla, sed accumsan metus urna et mi. Donec aliquam ac purus in 
+sollicitudin. Nullam condimentum neque eget mi sagittis, sit amet dapibus 
+sapien condimentum. Morbi at tincidunt mi, in ultricies erat. Etiam nec 
+mattis diam, ut suscipit neque. Aenean varius diam sit amet vulputate viverra. 
+Duis venenatis consequat augue at feugiat. Aliquam dictum dolor metus, sed 
+venenatis nulla egestas sit amet.Nulla at congue diam. Nunc interdum ex 
+aliquet, euismod urna eget, interdum orci. Sed tristique viverra ullamcorper. 
+Pellentesque vitae magna eget diam euismod faucibus at non ante. Donec feugiat 
+aliquet gravida. Quisque vel purus faucibus, luctus diam non, pulvinar tortor. 
+Nam dignissim, felis vitae commodo mollis, nibh mi tincidunt nunc, et 
+scelerisque mauris dui non orci. Cras luctus finibus dui, vel elementum massa 
+bibendum eu. Donec quis tincidunt ipsum. Mauris eget turpis in erat fermentum 
+commodo a at velit. Curabitur non metus vitae urna posuere fringilla quis a 
+turpis.
+
+
+**Keywords:** word1, word2, word3, word4.
