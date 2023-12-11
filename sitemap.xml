@@ -19,6 +19,9 @@
     <loc>/news/index.html</loc>
   </url>
   <url>
+    <loc>/reference/add_chapter.html</loc>
+  </url>
+  <url>
     <loc>/reference/create_project_tree.html</loc>
   </url>
   <url>
@@ -26,5 +29,8 @@
   </url>
   <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/setup_quarto_book.html</loc>
   </url>
 </urlset>
