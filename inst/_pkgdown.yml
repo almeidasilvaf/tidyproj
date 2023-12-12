@@ -11,8 +11,7 @@ template:
     code_font:
       google: "Source Code Pro"
     primary: "#18416a"                          # navbar hover and sidebar: dark blue
-    navbar-light-bg: "#0092ac"                  # navbar bg: Bioc blue
-    navbar-bg: "#0092ac"                        # navbar bg: Bioc blue
+    navbar-background: "#0092ac"
     navbar-light-brand-color: "#f9fafb"         # pkg name: white
     text-muted: "#e9ecef"                       # version: light gray
     navbar-light-color: "#f8f9fa"               # navbar pages text color: white
