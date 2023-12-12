@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://almeidasilvaf.github.io/tidyproj/404.html</loc>
+    <loc>/404.html</loc>
   </url>
   <url>
-    <loc>https://almeidasilvaf.github.io/tidyproj/articles/index.html</loc>
+    <loc>/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://almeidasilvaf.github.io/tidyproj/articles/tidyproj_vignette.html</loc>
+    <loc>/articles/tidyproj_vignette.html</loc>
   </url>
   <url>
-    <loc>https://almeidasilvaf.github.io/tidyproj/authors.html</loc>
+    <loc>/authors.html</loc>
   </url>
   <url>
-    <loc>https://almeidasilvaf.github.io/tidyproj/index.html</loc>
+    <loc>/index.html</loc>
   </url>
   <url>
-    <loc>https://almeidasilvaf.github.io/tidyproj/news/index.html</loc>
+    <loc>/news/index.html</loc>
   </url>
   <url>
-    <loc>https://almeidasilvaf.github.io/tidyproj/reference/add_chapter.html</loc>
+    <loc>/reference/add_chapter.html</loc>
   </url>
   <url>
-    <loc>https://almeidasilvaf.github.io/tidyproj/reference/create_project_tree.html</loc>
+    <loc>/reference/create_project_tree.html</loc>
   </url>
   <url>
-    <loc>https://almeidasilvaf.github.io/tidyproj/reference/create_rmd.html</loc>
+    <loc>/reference/create_rmd.html</loc>
   </url>
   <url>
-    <loc>https://almeidasilvaf.github.io/tidyproj/reference/index.html</loc>
+    <loc>/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://almeidasilvaf.github.io/tidyproj/reference/setup_quarto_book.html</loc>
+    <loc>/reference/setup_quarto_book.html</loc>
   </url>
 </urlset>
