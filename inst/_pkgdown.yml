@@ -1,3 +1,6 @@
+
+url: https://almeidasilvaf.github.io/tidyproj/
+
 template:
   bootstrap: 5
   bslib:
@@ -15,6 +18,3 @@ template:
     navbar-light-color: "#f8f9fa"               # navbar pages text color: white
     navbar-light-hover-color: "#87b13f"         # navbar text on hover: Bioc green
     pkgdown-nav-height: 78px
-
-navbar:
-  type: light
