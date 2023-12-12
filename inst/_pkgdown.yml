@@ -17,5 +17,4 @@ template:
     pkgdown-nav-height: 78px
 
 navbar:
-  bg: "#0092ac"
   type: light
