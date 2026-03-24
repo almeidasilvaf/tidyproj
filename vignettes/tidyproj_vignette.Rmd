@@ -165,7 +165,8 @@ you can create them with the function `add_chapter()`.
 
 ```{r add_chapter}
 # Create another .qmd file inside chapters/
-add_chapter(filename = here::here("chapters", "chapter_03.qmd"))
+file_name <- here::here(rootdir, "chapters", "chapter_03.qmd")
+add_chapter(filename = file_name)
 ```
 
 # Session information {.unnumbered}
