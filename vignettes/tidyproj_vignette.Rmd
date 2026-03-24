@@ -164,8 +164,8 @@ two `.qmd` files to the **chapters/** directory. If you need more files,
 you can create them with the function `add_chapter()`.
 
 ```{r add_chapter}
-# Create another .Rmd file inside code/
-add_chapter(filename = here("chapters", "chapter_03.qmd"))
+# Create another .qmd file inside chapters/
+add_chapter(filename = here::here("chapters", "chapter_03.qmd"))
 ```
 
 # Session information {.unnumbered}
