@@ -81,8 +81,8 @@ rootdir
 create_project_tree(rootdir)
 ```
 
-The function `create_project_tree()` creates 3 directories (**data**, **code**,
-and **products**), as well as a `README.md` file. In the sections below,
+The function `create_project_tree()` creates 4 directories (**data**, **code**,
+**chapters**, and **products**), as well as a `README.md` file. In the sections below,
 you will find what each of them mean.
 
 ## The **data/** directory
@@ -90,53 +90,24 @@ you will find what each of them mean.
 The **data/** directory is where you must store all input data you
 use in the project. For example, if you are a bioinformatician working on
 RNA-seq data that you obtained from a public database, you must include the
-gene expression matrices (e.g., as .tsv files) in this directory. Note that
-there is a `DATA_DESCRIPTION.Rmd` file in the **data/** directory, which must
-contain all code you used to obtain each file in this directory.
+gene expression matrices (e.g., as .tsv files) in this directory. 
 
 ## The **code/** directory
 
-The **code/** directory contains `.Rmd` files that will describe all your
-analyses (code and text). Each file is already prepopulated with fields
-that should be present in your documents. Let's take a look at one of them.
+The **code/** directory is where you will store `.R` files with utility
+code, including helper functions, and code to create final (i.e., 'polished') 
+figures and tables.
 
-```{r code_dir}
-# Path to .Rmd file 01_first_analysis.Rmd
-rmd1 <- file.path(rootdir, "code", "01_first_analysis.Rmd")
+## The **chapters/** directory
 
-# Print content of the file
-cat(readLines(rmd1), sep = "\n")
-```
-
-The mandatory sections for each `.Rmd` file include:
-
-1. **Overview:** In this section, you will briefly describe what you are doing
-in this document, listing objectives you want to achieve or scientific
-questions you are trying to address.
-
-2. **Analysis [n]:** These are the sections where you will write the code
-for your data analyses. Always try to use a section for each objective you
-described in **Overview**. Thus, if you want to answer 4 questions in a
-specific `.Rmd` file, list these 4 questions in **Overview** and write a
-separate **Analysis** section for each question. Besides, make sure you include
-not only code chunks, but also text describing your analysis and summarizing
-what you observed. **I am 100% sure that this will help you write the paper**,
-because you will already have a summary of your findings. In a sense,
-you will write parts of your paper while you do the analyses, and that is
-super helpful.
-
-3. **Session information:** This section contains a code chunk that will 
-display information about everything you used in your R session, including
-OS, R version, packages you loaded, packages that were used indirectly, etc.
-
-
-Note that code chunks are not evaluated by default (except for session 
+This is where you will store you `.qmd` files with code and text structured in
+chapters. Note that code chunks are not evaluated by default (except for session 
 information code). This is because most real-world scientific projects 
 contain heavy analyses with code chunks that take a long time to run.
 While it is very important to have evaluated code in these documentations, 
 that is not always possible. At the end of the day, it's way better to have 
 documented code that is not evaluated than having no documentation at all.
-However, if your `.Rmd` file describes analyses that do not take a long
+However, if your `.qmd` file describes analyses that do not take a long
 time to run, you can (and should) set `eval = TRUE` in the code chunk options.
 
 ## The **products/** directory
@@ -186,15 +157,15 @@ readme <- file.path(rootdir, "README.md")
 cat(readLines(readme), sep = "\n")
 ```
 
-# Creating new `.Rmd` files
+# Creating new `.qmd` files
 
 By default, `r BiocStyle::Githubpkg("almeidasilvaf/tidyproj")` adds
-four `.Rmd` files to the **code/** directory. If you need more files,
-you can create them with the function `create_rmd()`.
+two `.qmd` files to the **chapters/** directory. If you need more files,
+you can create them with the function `add_chapter()`.
 
-```{r create_rmd}
+```{r add_chapter}
 # Create another .Rmd file inside code/
-create_rmd(rootdir, filename = "05_descriptive_analysis_name.Rmd")
+add_chapter(filename = here("chapters", "chapter_03.qmd"))
 ```
 
 # Session information {.unnumbered}

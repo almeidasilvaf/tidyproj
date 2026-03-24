@@ -5,23 +5,24 @@
 #' 
 #' @param rootdir Path to root directory where the structure will be created.
 #' Default: \code{here::here()}.
+#' @param quarto_book Logical indicating whether to set up a Quarto book.
+#' Default: TRUE.
 #' 
 #' @return A character vector with paths to the directory structure.
 #' 
 #' @rdname create_project_tree
 #' @importFrom fs dir_create dir_tree
-#' @importFrom rmarkdown draft
 #' @importFrom here here
 #' @export
 #' @examples 
 #' rootdir <- file.path(tempdir(), paste0(sample(1:100, 1), "_tidyproj_ex"))
 #' c <- create_project_tree(rootdir)
-create_project_tree <- function(rootdir = here::here()) {
+create_project_tree <- function(rootdir = here::here(), quarto_book = TRUE) {
 
-    fs::dir_create(rootdir)    
+    fs::dir_create(rootdir)
     
     # README.md
-    content <- c("# Project title", "", "", "## Abstract", "", "")
+    content <- c("## Overview", "", "")
     writeLines(content, con = file.path(rootdir, "README.md"))
     
     # Directories
@@ -41,61 +42,9 @@ create_project_tree <- function(rootdir = here::here()) {
     # Create directories
     create_dirs <- lapply(dirs, fs::dir_create)
     
-    # Documents inside directories
-    rmarkdown::draft(
-        file.path(rootdir, "data", "DATA_DESCRIPTION.Rmd"),
-        template = "github_document", package = "rmarkdown", edit = FALSE
-    )
-    
-    docs <- c(
-        file.path(rootdir, "code", "01_first_analysis.Rmd"),
-        file.path(rootdir, "code", "02_second_analysis.Rmd")
-    )
-    
-    # Create .Rmd files
-    create_rmd <- lapply(docs, function(x) {
-        c <- rmarkdown::draft(
-            x,
-            template = "template-for-code", package = "tidyproj", 
-            edit = FALSE
-        )
-        return(c)
-    })
+    # Set up Quarto book
+    if(quarto_book) { s <- setup_quarto_book(rootdir) }
     
     return(fs::dir_tree(rootdir))
 }
-
-#' Create an .Rmd file for code
-#'
-#' @param rootdir Path to root of the directory created 
-#' with \code{create_project_tree()}. Default: \code{here::here().}
-#' Default: \code{here::here()}.
-#' @param filename Character specifying the name of the .Rmd file to be 
-#' created. Default: 0_new_code_file.Rmd.
-#' 
-#' 
-#' @return Path to newly created .Rmd file.
-#' 
-#' @export
-#' @rdname create_rmd
-#' @importFrom rmarkdown draft
-#' @examples 
-#' rootdir <- file.path(tempdir(), "tidyproj_example")
-#' c <- create_project_tree(rootdir)
-#' 
-#' # Create file
-#' fname <- paste0(sample(1:100, 1), "_new_analysis.Rmd")
-#' file <- create_rmd(rootdir, filename = fname)
-create_rmd <- function(rootdir = here::here(), 
-                       filename = "00_new_code_file.Rmd") {
-    
-    file_path <- file.path(rootdir, "code", filename)
-    c <- rmarkdown::draft(
-        file_path,
-        template = "template-for-code", package = "tidyproj", 
-        edit = FALSE
-    )
-    return(file_path)
-}
-
 

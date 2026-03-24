@@ -19,10 +19,9 @@ URL: https://github.com/almeidasilvaf/tidyproj
 BugReports: https://github.com/almeidasilvaf/tidyproj/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.3
 Imports: 
     fs,
-    rmarkdown,
     here
 Depends: 
     R (>= 4.1)

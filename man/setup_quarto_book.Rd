@@ -19,5 +19,4 @@ Set up directory for a Quarto book
 rootdir <- tempdir()
 
 setup_quarto_book(rootdir)
-
 }

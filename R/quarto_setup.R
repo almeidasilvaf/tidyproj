@@ -8,13 +8,12 @@
 #' 
 #' @export
 #' @rdname setup_quarto_book
-#' @importFrom fs file_copy dir_tree
+#' @importFrom fs file_copy dir_ls
 #' @importFrom here here
 #' @examples
 #' rootdir <- tempdir()
 #'
 #' setup_quarto_book(rootdir)
-#' 
 setup_quarto_book <- function(rootdir = here()) {
     
     # Create `index.qmd`
@@ -52,7 +51,7 @@ setup_quarto_book <- function(rootdir = here()) {
     gha_file <- system.file("extdata", "publish.yml", package = "tidyproj")
     fs::file_copy(gha_file, file.path(rootdir, ".github/workflows", "publish.yml"))
     
-    return(fs::dir_tree(rootdir))
+    return(fs::dir_ls(rootdir))
 }
 
 

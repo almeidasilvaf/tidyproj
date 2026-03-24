@@ -4,11 +4,14 @@
 \alias{create_project_tree}
 \title{Create project tree}
 \usage{
-create_project_tree(rootdir = here::here())
+create_project_tree(rootdir = here::here(), quarto_book = TRUE)
 }
 \arguments{
 \item{rootdir}{Path to root directory where the structure will be created.
 Default: \code{here::here()}.}
+
+\item{quarto_book}{Logical indicating whether to set up a Quarto book.
+Default: TRUE.}
 }
 \value{
 A character vector with paths to the directory structure.
