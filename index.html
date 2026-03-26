@@ -68,15 +68,17 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">exampledir</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"exampledir"</span>, package <span class="op">=</span> <span class="st">"tidyproj"</span><span class="op">)</span></span>
 <span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_tree.html" class="external-link">dir_tree</a></span><span class="op">(</span><span class="va">exampledir</span><span class="op">)</span></span>
-<span><span class="co">#&gt; /tmp/Rtmp6OxAsJ/temp_libpath9cfde46e58d41/tidyproj/extdata/exampledir</span></span>
+<span><span class="co">#&gt; /home/faalm/R/x86_64-pc-linux-gnu-library/4.5/tidyproj/extdata/exampledir</span></span>
 <span><span class="co">#&gt; ├── README.md</span></span>
+<span><span class="co">#&gt; ├── _quarto.yml</span></span>
+<span><span class="co">#&gt; ├── bibliography.bib</span></span>
+<span><span class="co">#&gt; ├── chapters</span></span>
+<span><span class="co">#&gt; │   ├── appendices.qmd</span></span>
+<span><span class="co">#&gt; │   ├── chapter_01.qmd</span></span>
+<span><span class="co">#&gt; │   └── chapter_02.qmd</span></span>
 <span><span class="co">#&gt; ├── code</span></span>
-<span><span class="co">#&gt; │   ├── 01_first_analysis.Rmd</span></span>
-<span><span class="co">#&gt; │   ├── 02_second_analysis.Rmd</span></span>
-<span><span class="co">#&gt; │   ├── 03_third_analysis.Rmd</span></span>
-<span><span class="co">#&gt; │   └── 04_fourth_analysis.Rmd</span></span>
 <span><span class="co">#&gt; ├── data</span></span>
-<span><span class="co">#&gt; │   └── DATA_DESCRIPTION.Rmd</span></span>
+<span><span class="co">#&gt; ├── index.qmd</span></span>
 <span><span class="co">#&gt; └── products</span></span>
 <span><span class="co">#&gt;     ├── figs</span></span>
 <span><span class="co">#&gt;     ├── plots</span></span>

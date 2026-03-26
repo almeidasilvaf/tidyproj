@@ -24,18 +24,18 @@ A character vector with paths to the directory structure.
 rootdir <- tempdir()
 
 setup_quarto_book(rootdir)
-#> /tmp/RtmpeIBVRy/45_tidyproj_ex
-#> /tmp/RtmpeIBVRy/_quarto.yml
-#> /tmp/RtmpeIBVRy/bibliography.bib
-#> /tmp/RtmpeIBVRy/bslib-ab09c8dd849f1780583fea51d923566e
-#> /tmp/RtmpeIBVRy/chapters
-#> /tmp/RtmpeIBVRy/downlit
-#> /tmp/RtmpeIBVRy/file1cdb1feb29d6
-#> /tmp/RtmpeIBVRy/file1cdb3098d102
-#> /tmp/RtmpeIBVRy/file1cdb3251e166
-#> /tmp/RtmpeIBVRy/file1cdb3973551
-#> /tmp/RtmpeIBVRy/file1cdb43792dbc
-#> /tmp/RtmpeIBVRy/file1cdb5460ccf0
-#> /tmp/RtmpeIBVRy/file1cdb7cb9a10b.qmd
-#> /tmp/RtmpeIBVRy/index.qmd
+#> /tmp/RtmpAMEfhd/45_tidyproj_ex
+#> /tmp/RtmpAMEfhd/_quarto.yml
+#> /tmp/RtmpAMEfhd/bibliography.bib
+#> /tmp/RtmpAMEfhd/bslib-ab09c8dd849f1780583fea51d923566e
+#> /tmp/RtmpAMEfhd/chapters
+#> /tmp/RtmpAMEfhd/downlit
+#> /tmp/RtmpAMEfhd/file1cdc1231b5f4
+#> /tmp/RtmpAMEfhd/file1cdc12a9b58f.qmd
+#> /tmp/RtmpAMEfhd/file1cdc146d4f2a
+#> /tmp/RtmpAMEfhd/file1cdc5b92a82
+#> /tmp/RtmpAMEfhd/file1cdc69ef8a51
+#> /tmp/RtmpAMEfhd/file1cdc754f877e
+#> /tmp/RtmpAMEfhd/file1cdcd811272
+#> /tmp/RtmpAMEfhd/index.qmd
 ```

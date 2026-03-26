@@ -56,10 +56,10 @@ as the root directory.
 # Create project structure in a temporary directory
 rootdir <- file.path(tempdir(), "example_project")
 rootdir
-#> [1] "/tmp/RtmpDIunPj/example_project"
+#> [1] "/tmp/RtmpsvLtZ5/example_project"
 
 create_project_tree(rootdir)
-#> /tmp/RtmpDIunPj/example_project
+#> /tmp/RtmpsvLtZ5/example_project
 #> ├── README.md
 #> ├── _quarto.yml
 #> ├── bibliography.bib
@@ -169,7 +169,7 @@ you can create them with the function
 # Create another .qmd file inside chapters/
 file_name <- here::here(rootdir, "chapters", "chapter_03.qmd")
 add_chapter(filename = file_name)
-#> /tmp/RtmpDIunPj/example_project/chapters/chapter_03.qmd
+#> /tmp/RtmpsvLtZ5/example_project/chapters/chapter_03.qmd
 ```
 
 ## Session information
@@ -188,7 +188,7 @@ sessioninfo::session_info()
 #>  collate  C.UTF-8
 #>  ctype    C.UTF-8
 #>  tz       UTC
-#>  date     2026-03-24
+#>  date     2026-03-26
 #>  pandoc   3.1.11 @ /opt/hostedtoolcache/pandoc/3.1.11/x64/ (via rmarkdown)
 #>  quarto   1.9.36 @ /usr/local/bin/quarto
 #> 
@@ -205,7 +205,7 @@ sessioninfo::session_info()
 #>  digest        0.6.39  2025-11-19 [1] RSPM
 #>  evaluate      1.0.5   2025-08-27 [1] RSPM
 #>  fastmap       1.2.0   2024-05-15 [1] RSPM
-#>  fs            2.0.0   2026-03-22 [1] RSPM
+#>  fs            2.0.1   2026-03-24 [1] RSPM
 #>  glue          1.8.0   2024-09-30 [1] RSPM
 #>  here          1.0.2   2025-09-15 [1] RSPM
 #>  htmltools     0.5.9   2025-12-04 [1] RSPM
@@ -227,7 +227,7 @@ sessioninfo::session_info()
 #>  systemfonts   1.3.2   2026-03-05 [1] RSPM
 #>  textshaping   1.0.5   2026-03-06 [1] RSPM
 #>  tibble        3.3.1   2026-01-11 [1] RSPM
-#>  tidyproj    * 0.99.0  2026-03-24 [1] local
+#>  tidyproj    * 0.99.0  2026-03-26 [1] local
 #>  vctrs         0.7.2   2026-03-21 [1] RSPM
 #>  xfun          0.57    2026-03-20 [1] RSPM
 #>  yaml          2.3.12  2025-12-10 [1] RSPM

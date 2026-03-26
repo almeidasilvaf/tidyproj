@@ -29,7 +29,7 @@ A character vector with paths to the directory structure.
 ``` r
 rootdir <- file.path(tempdir(), paste0(sample(1:100, 1), "_tidyproj_ex"))
 c <- create_project_tree(rootdir)
-#> /tmp/RtmpeIBVRy/45_tidyproj_ex
+#> /tmp/RtmpAMEfhd/45_tidyproj_ex
 #> ├── README.md
 #> ├── _quarto.yml
 #> ├── bibliography.bib
